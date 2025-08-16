@@ -4,43 +4,109 @@
     <title>Bai1</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <style>
+        /* Reset CSS cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Menu */
+        ul.nav {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            padding: 15px 20px;
+            border-radius: 20px;
+            background: rgba(248, 249, 250, 0.75); /* giống bg-body-tertiary + opacity */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: opacity 0.3s;
+            opacity: 0.75;
+        }
+
+        ul.nav:hover {
+            opacity: 1;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            color: #000;
+            transition: background 0.3s, color 0.3s;
+            display: block;
+        }
+
+        .nav-item a.active {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+        .nav-item a:hover {
+            background: #0d6efd;
+            color: #fff;
+        }
+
+        /* Nội dung */
+        .container {
+            margin-top: 30px;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .container h1 {
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            line-height: 1.5;
+            color: #333;
+        }
+    </style>
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100 flex-column">
+<body>
 
-    <!-- Menu với hiệu ứng hover cho cả ul -->
-    <ul class="nav nav-pills bg-body-tertiary bg-opacity-75 p-3 rounded-4 shadow gap-2 opacity-75 opacity-100-hover">
+    <!-- Menu -->
+    <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link active rounded-pill" href="index.html">Bài 1.1</a>
+            <a class="active" href="index.html">Bài 1.1</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link rounded-pill" href="bai1_2.html">Bài 1.2</a>
+            <a href="bai1_2.html">Bài 1.2</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link rounded-pill" href="bai1_3.html">Bài 1.3</a>
+            <a href="bai1_3.html">Bài 1.3</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link rounded-pill" href="bai1_4.html">Bài 1.4</a>
+            <a href="bai1_4.html">Bài 1.4</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link rounded-pill" href="bai1_5.html">Bài 1.5</a>
+            <a href="bai1_5.html">Bài 1.5</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link rounded-pill" href="bai1_6.html">Bài 1.6</a>
+            <a href="bai1_6.html">Bài 1.6</a>
         </li>
     </ul>
 
-    <div class="container text-center mt-4">
-        <h1>Chào mừng bạn đến với trang bootstrap</h1>
+    <!-- Nội dung -->
+    <div class="container">
+        <h1>Chào mừng bạn đến với trang CSS thuần</h1>
         <p>
             Thu nhập từ hoạt động sản xuất, kinh doanh hàng hoá, dịch vụ của doanh nghiệp 
             có từ 30% số lao động bình quân trong năm trở lên là người khuyết tật
         </p>    
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
