@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trang thông tin cá nhân (Bootstrap 3)</title>
+
+  <!-- Bootstrap 3.4.1 (có Glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body { background: #f7f7f9; }
+    .page-header { margin-top: 20px; }
+    .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+    .panel-card { box-shadow: 0 2px 6px rgba(0,0,0,.08); border-radius: 8px; overflow: hidden; }
+    .panel-card .panel-heading { font-weight: 600; }
+    .skill-item { margin-bottom: 10px; }
+    .skill-item .label { font-size: 12px; }
+    .breadcrumb { background: #fff; border: 1px solid #eee; }
+    .contact-cta { margin-top: 10px; }
+    .panel-footer { background: #fff; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Breadcrumbs (điều hướng) -->
+    <ol class="breadcrumb" style="margin-top:15px;">
+      <li><a href="trangchu.html">Trang chủ</a></li>
+      <li class="active">Hồ sơ cá nhân</li>
+    </ol>
+
+    <div class="page-header">
+      <h1 class="h3" style="margin:0;">Hồ sơ cá nhân <small>– Thông tin & Dự án</small></h1>
+    </div>
+
+    <div class="row">
+      <!-- Cột trái: Thông tin cá nhân + Kỹ năng + Liên hệ -->
+      <div class="col-sm-4">
+        <div class="panel panel-default panel-card">
+          <div class="panel-body text-center">
+            <img class="avatar" src="c:\Users\FPT 1174\Downloads\anh2.jpg" alt="Avatar">
+            <h3 style="margin-top:15px;">Quyết Văn Thái</h3>
+            <p class="text-muted">Frontend Developer</p>
+            <p>
+              <span class="glyphicon glyphicon-map-marker"></span> Hà Nội, Việt Nam
+            </p>
+            <!-- Button (liên hệ) -->
+            <div class="contact-cta">
+              <a href="#lien-he-nhanh" class="btn btn-primary">
+                <span class="glyphicon glyphicon-earphone"></span> Liên hệ ngay
+              </a>
+              <a href="mailto:email@example.com" class="btn btn-default">
+                <span class="glyphicon glyphicon-envelope"></span> Gửi email
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Glyphicons (icon kỹ năng) -->
+        <div class="panel panel-default panel-card">
+          <div class="panel-heading">Kỹ năng</div>
+          <div class="panel-body">
+            <div class="skill-item">
+              <span class="glyphicon glyphicon-console"></span>
+              <strong> HTML / CSS </strong>
+              <span class="label label-success">Nâng cao</span>
+              <div class="progress" style="margin-top:8px;">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">90%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="glyphicon glyphicon-phone"></span>
+              <strong> Bootstrap / Responsive </strong>
+              <span class="label label-info">Khá</span>
+              <div class="progress" style="margin-top:8px;">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="glyphicon glyphicon-wrench"></span>
+              <strong> JavaScript / jQuery </strong>
+              <span class="label label-primary">Khá</span>
+              <div class="progress" style="margin-top:8px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">75%</div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="glyphicon glyphicon-cloud"></span>
+              <strong> Git / CI </strong>
+              <span class="label label-default">Trung bình</span>
+              <div class="progress" style="margin-top:8px;">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">60%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cột phải: Dự án (Card/Panel) + Form liên hệ nhanh -->
+      <div class="col-sm-8">
+        <!-- Dự án (dùng panel như card) -->
+        <div class="panel panel-default panel-card">
+          <div class="panel-heading">Dự án nổi bật</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="panel panel-default panel-card">
+                  <div class="panel-heading">Landing Page Sản phẩm</div>
+                  <div class="panel-body">
+                    <img class="img-responsive" src="c:\Users\FPT 1174\Downloads\anhn1.jpg" alt="Project 1">
+                    <p style="margin-top:10px;">Thiết kế landing page bán hàng tối ưu SEO và tốc độ tải.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <a class="btn btn-xs btn-primary" href="#">Xem chi tiết</a>
+                    <a class="btn btn-xs btn-default" href="#">Demo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="panel panel-default panel-card">
+                  <div class="panel-heading">Dashboard Quản trị</div>
+                  <div class="panel-body">
+                    <img class="img-responsive" src="https://picsum.photos/seed/p2/640/360" alt="Project 2">
+                    <p style="margin-top:10px;">Xây dựng dashboard theo dõi số liệu thời gian thực.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <a class="btn btn-xs btn-primary" href="#">Xem chi tiết</a>
+                    <a class="btn btn-xs btn-default" href="#">Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="panel panel-default panel-card">
+                  <div class="panel-heading">Website Portfolio</div>
+                  <div class="panel-body">
+                    <img class="img-responsive" src="c:\Users\FPT 1174\Downloads\anhn2.jpg" alt="Project 3">
+                    <p style="margin-top:10px;">Giới thiệu cá nhân, dự án và blog kỹ thuật.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <a class="btn btn-xs btn-primary" href="#">Xem chi tiết</a>
+                    <a class="btn btn-xs btn-default" href="#">Demo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="panel panel-default panel-card">
+                  <div class="panel-heading">App Sự kiện</div>
+                  <div class="panel-body">
+                    <img class="img-responsive" src="https://picsum.photos/seed/p4/640/360" alt="Project 4">
+                    <p style="margin-top:10px;">Quản lý đăng ký, vé và phản hồi cho sự kiện.</p>
+                  </div>
+                  <div class="panel-footer">
+                    <a class="btn btn-xs btn-primary" href="#">Xem chi tiết</a>
+                    <a class="btn btn-xs btn-default" href="#">Demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Form (liên hệ nhanh) -->
+        <div id="lien-he-nhanh" class="panel panel-default panel-card">
+          <div class="panel-heading">Liên hệ nhanh</div>
+          <div class="panel-body">
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="hoTen">Họ và tên</label>
+                    <input type="text" class="form-control" id="hoTen" placeholder="Nhập họ tên">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="soDienThoai">Số điện thoại</label>
+                    <input type="tel" class="form-control" id="soDienThoai" placeholder="098x xxx xxx">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="chuDe">Chủ đề</label>
+                    <input type="text" class="form-control" id="chuDe" placeholder="Ví dụ: Hợp tác dự án">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="noiDung">Nội dung</label>
+                <textarea id="noiDung" class="form-control" rows="4" placeholder="Mô tả yêu cầu của bạn..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-success">
+                <span class="glyphicon glyphicon-send"></span> Gửi yêu cầu
+              </button>
+              <button type="reset" class="btn btn-default">Làm mới</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+    <footer class="text-center text-muted" style="margin-bottom:30px;">
+      <small>&copy; 2025 Quyết văn thái. All rights reserved.</small>
+    </footer>
+  </div>
+  <!-- Footer -->
+<footer class="bg-white shadow-lg mt-5">
+  <div class="container py-4">
+    <div class="row align-items-center">
+      <!-- Thông tin nhóm -->
+      <div class="col-md-6 mb-3 mb-md-0">
+        <h5 class="fw-bold text-primary">Nhóm CV 5</h5>
+        <p class="mb-1 text-muted">Trang web tổng hợp CV của các thành viên nhóm.</p>
+        <p class="mb-0 text-muted">© 2025 Nhóm 5. All rights reserved.</p>
+      </div>
+
+      <!-- Liên hệ + mạng xã hội -->
+      <div class="col-md-6 text-md-end">
+        <a href="mailto:groupcv@gmail.com" class="btn btn-outline-primary btn-sm me-2">
+          <i class="bi bi-envelope"></i> Email
+        </a>
+        <a href="#" class="btn btn-outline-dark btn-sm me-2">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+        <a href="#" class="btn btn-outline-primary btn-sm">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</body>
+</html>
