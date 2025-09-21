@@ -1,0 +1,424 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Trang chủ nhóm - Danh sách CV</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<!-- Bootstrap Icons & Google Fonts -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+		<style>
+			body { font-family: 'Montserrat', Arial, sans-serif; }
+			body { background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); }
+			.cv-card {
+				background: #fff;
+				border-radius: 1.2rem;
+				box-shadow: 0 4px 24px rgba(99,102,241,0.10);
+				padding: 1.5rem 1rem 1rem 1rem;
+				margin-bottom: 2rem;
+				border-left: 6px solid #6366f1;
+				transition: box-shadow 0.2s;
+			}
+			#mainCarousel {
+				height: 500px;
+				background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			#mainCarousel img {
+				height: 500px;
+			}
+			.cv-card:hover { box-shadow: 0 8px 32px rgba(99,102,241,0.18); }
+			.avatar {
+				width: 110px;
+				height: 110px;
+				object-fit: cover;
+				border-radius: 50%;
+				border: 3px solid #6366f1;
+				margin-bottom: 0.7rem;
+			}
+			.cv-name { color: #6366f1; font-size: 1.3rem; font-weight: 700; }
+			.cv-title { color: #f59e42; font-size: 1.1rem; font-weight: 600; }
+			.cv-skill-badge { background: #6366f1; color: #fff; border-radius: 1rem; padding: 0.2rem 0.7rem; margin: 0.1rem 0.2rem 0.1rem 0; font-size: 0.85rem; display: inline-block; }
+			.filter-btn.active { background: #6366f1 !important; color: #fff !important; }
+		</style>
+	</head>
+	<body>
+		<!-- Carousel Banner -->
+		<div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Teamwork">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5 class="fw-bold">Chào mừng đến với Nhóm CV 5</h5>
+		        <p>Khám phá hồ sơ và kỹ năng của các thành viên xuất sắc!</p>
+		      </div>
+		    </div>
+		    <div class="carousel-item">
+		      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" class="d-block w-100" alt="Web Dev">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5 class="fw-bold">Kết nối & Học hỏi</h5>
+		        <p>Cùng nhau phát triển kỹ năng lập trình hiện đại.</p>
+		      </div>
+		    </div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
+		<!-- Dropdown menu for quick filter -->
+		<div class="container mb-3 d-lg-none">
+		  <div class="dropdown">
+		    <button class="btn btn-primary dropdown-toggle w-100" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+		      Lọc theo kỹ năng
+		    </button>
+		    <ul class="dropdown-menu w-100" aria-labelledby="filterDropdown">
+		      <li><a class="dropdown-item filter-btn" data-skill="all" href="#">Tất cả</a></li>
+		      <li><a class="dropdown-item filter-btn" data-skill="javascript" href="#">JavaScript</a></li>
+		      <li><a class="dropdown-item filter-btn" data-skill="reactjs" href="#">ReactJS</a></li>
+		      <li><a class="dropdown-item filter-btn" data-skill="nodejs" href="#">Node.js</a></li>
+		      <li><a class="dropdown-item filter-btn" data-skill="mysql" href="#">MySQL</a></li>
+		      <li><a class="dropdown-item filter-btn" data-skill="mongodb" href="#">MongoDB</a></li>
+		    </ul>
+		  </div>
+		</div>
+			<div class="container">
+				<a class="navbar-brand fw-bold text-primary" href="#">Trang chủ nhóm CV</a>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item"><button class="btn btn-outline-primary mx-1 filter-btn" data-skill="all">Tất cả</button></li>           
+                        <li class="nav-item"><button class="btn btn-outline-primary mx-1 filter-btn" data-skill="javascript">JavaScript</button></li>
+						<li class="nav-item"><button class="btn btn-outline-primary mx-1 filter-btn" data-skill="reactjs">ReactJS</button></li>
+						<li class="nav-item"><button class="btn btn-outline-primary mx-1 filter-btn" data-skill="nodejs">Node.js</button></li>
+						<li class="nav-item"><button class="btn btn-outline-primary mx-1 filter-btn" data-skill="mysql">MySQL</button></li>
+						<li class="nav-item"><button class="btn btn-outline-primary mx-1 filter-btn" data-skill="mongodb">MongoDB</button></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+		  <!-- Scrollspy navigation -->
+		  <div class="row mb-4">
+		    <div class="col-12">
+		      <nav id="scrollspyNav" class="navbar navbar-light bg-light px-3 rounded shadow-sm">
+		        <a class="navbar-brand fw-bold" href="#cv-list">Danh sách CV</a>
+		        <ul class="nav nav-pills">
+		          <li class="nav-item"><a class="nav-link" href="#cv-thai">Thái</a></li>
+		          <li class="nav-item"><a class="nav-link" href="#cv-minh">Minh</a></li>
+		          <li class="nav-item"><a class="nav-link" href="#cv-hoa">Hòa</a></li>
+		          <li class="nav-item"><a class="nav-link" href="#cv-hung">Hùng</a></li>
+		          <li class="nav-item"><a class="nav-link" href="#cv-huan">Huân</a></li>
+		        </ul>
+		      </nav>
+		    </div>
+		  </div>
+			<div class="row" id="cv-list">
+
+							<!-- CV Card: Quyết Văn Thái -->
+<div class="col-md-4 mb-4 cv-item" data-skills="javascript reactjs nodejs mysql mongodb" id="cv-thai">
+  <div class="cv-card h-100">
+    <div class="text-center">
+      <img src="c:\Users\FPT 1174\Downloads\anh2.jpg" alt="Avatar" class="avatar" data-bs-toggle="tooltip" title="Click để xem chi tiết!">
+      <div class="cv-name">
+        Quyết Văn Thái 
+       
+      </div>
+      <div class="cv-title">Web Developer</div>
+    </div>
+
+    <!-- Skills with progress -->
+    <div class="mt-2 mb-2">
+      <div class="fw-semibold small text-muted mb-1">Mức độ kỹ năng</div>
+      <div class="mb-1">JavaScript <div class="progress"><div class="progress-bar bg-success" style="width: 90%">90%</div></div></div>
+      <div class="mb-1">ReactJS <div class="progress"><div class="progress-bar bg-info" style="width: 85%">85%</div></div></div>
+      <div class="mb-1">Node.js <div class="progress"><div class="progress-bar bg-warning" style="width: 80%">80%</div></div></div>
+      <div class="mb-1">MySQL <div class="progress"><div class="progress-bar bg-primary" style="width: 75%">75%</div></div></div>
+      <div class="mb-1">MongoDB <div class="progress"><div class="progress-bar bg-secondary" style="width: 70%">70%</div></div></div>
+    </div>
+
+    <!-- Skill badges -->
+    <div class="mb-2">
+      <span class="cv-skill-badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+      <span class="cv-skill-badge"><i class="bi bi-react"></i> ReactJS</span>
+      <span class="cv-skill-badge"><i class="bi bi-node-plus"></i> Node.js</span>
+      <span class="cv-skill-badge"><i class="bi bi-database"></i> MySQL</span>
+      <span class="cv-skill-badge"><i class="bi bi-database-fill"></i> MongoDB</span>
+    </div>
+
+    <div class="mb-1"><strong>Email:</strong> <a href="mailto:thaiquyet@gmail.com" class="text-primary">thaiquyet@gmail.com</a></div>
+    <div>
+      <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalThai">Xem CV</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Quyết Văn Thái -->
+<div class="modal fade" id="modalThai" tabindex="-1" aria-labelledby="modalThaiLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalThaiLabel">CV: Quyết Văn Thái</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Vị trí:</strong> Web Developer</p>
+        <p><strong>Kỹ năng:</strong> JavaScript, ReactJS, Node.js, MySQL, MongoDB</p>
+        <p><strong>Email:</strong> thaiquyet@gmail.com</p>
+        <a href="chitiet2.html" class="btn btn-primary">Xem chi tiết CV</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CV Card: Phạm Khắc Minh -->
+<div class="col-md-4 mb-4 cv-item" data-skills="javascript reactjs" id="cv-minh">
+  <div class="cv-card h-100">
+    <div class="text-center">
+      <img src="c:\Users\FPT 1174\Downloads\anh4.jpg" alt="Avatar" class="avatar" data-bs-toggle="tooltip" title="Click để xem chi tiết!">
+      <div class="cv-name">Phạm Khắc Minh</div>
+      <div class="cv-title">Front-end Developer</div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-2 mb-2">
+      <div class="fw-semibold small text-muted mb-1">Mức độ kỹ năng</div>
+      <div class="mb-1">JavaScript <div class="progress"><div class="progress-bar bg-success" style="width: 80%">80%</div></div></div>
+      <div class="mb-1">ReactJS <div class="progress"><div class="progress-bar bg-info" style="width: 75%">75%</div></div></div>
+    </div>
+
+    <!-- Skill badges -->
+    <div class="mb-2">
+      <span class="cv-skill-badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+      <span class="cv-skill-badge"><i class="bi bi-react"></i> ReactJS</span>
+    </div>
+
+    <div class="mb-1"><strong>Email:</strong> <a href="mailto:Minh@gmail.com" class="text-primary">Minh@gmail.com</a></div>
+    <div>
+      <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalMinh">Xem CV</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Phạm Khắc Minh -->
+<div class="modal fade" id="modalMinh" tabindex="-1" aria-labelledby="modalMinhLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMinhLabel">CV: Phạm Khắc Minh</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Vị trí:</strong> Front-end Developer</p>
+        <p><strong>Kỹ năng:</strong> JavaScript, ReactJS</p>
+        <p><strong>Email:</strong> Minh@gmail.com</p>
+        <a href="chitiet3.html" class="btn btn-primary">Xem chi tiết CV</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CV Card: Giàng Seo Hòa -->
+<div class="col-md-4 mb-4 cv-item" data-skills="nodejs mysql reactjs" id="cv-hoa">
+  <div class="cv-card h-100">
+    <div class="text-center">
+      <img src="c:\Users\FPT 1174\Downloads\anh1.jpg" alt="Avatar" class="avatar">
+      <div class="cv-name">Giàng Seo Hòa</div>
+      <div class="cv-title">Back-end Developer</div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-2 mb-2">
+      <div class="fw-semibold small text-muted mb-1">Mức độ kỹ năng</div>
+      <div class="mb-1">Node.js <div class="progress"><div class="progress-bar bg-warning" style="width: 85%">85%</div></div></div>
+      <div class="mb-1">MySQL <div class="progress"><div class="progress-bar bg-primary" style="width: 80%">80%</div></div></div>
+      <div class="mb-1">ReactJS <div class="progress"><div class="progress-bar bg-info" style="width: 60%">60%</div></div></div>
+    </div>
+
+    <!-- Skill badges -->
+    <div class="mb-2">
+      <span class="cv-skill-badge"><i class="bi bi-node-plus"></i> Node.js</span>
+      <span class="cv-skill-badge"><i class="bi bi-database"></i> MySQL</span>
+      <span class="cv-skill-badge"><i class="bi bi-react"></i> ReactJS</span>
+    </div>
+
+    <div class="mb-1"><strong>Email:</strong> <a href="mailto:giangseohoa@gmail.com" class="text-primary">giangseohoa@gmail.com</a></div>
+    <div>
+      <button class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalHoa">Xem CV</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Giàng Seo Hòa -->
+<div class="modal fade" id="modalHoa" tabindex="-1" aria-labelledby="modalHoaLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalHoaLabel">CV: Giàng Seo Hòa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Vị trí:</strong> Back-end Developer</p>
+        <p><strong>Kỹ năng:</strong> Node.js, MySQL, ReactJS</p>
+        <p><strong>Email:</strong> giangseohoa@gmail.com</p>
+        <a href="chitiet1.html" class="btn btn-primary">Xem chi tiết CV</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CV Card: Hà Ngọc Hùng -->
+<div class="col-md-4 mb-4 cv-item" data-skills="javascript mysql" id="cv-hung">
+  <div class="cv-card h-100">
+    <div class="text-center">
+      <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Avatar" class="avatar">
+      <div class="cv-name">Hà Ngọc Hùng</div>
+      <div class="cv-title">Fullstack Developer</div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-2 mb-2">
+      <div class="fw-semibold small text-muted mb-1">Mức độ kỹ năng</div>
+      <div class="mb-1">JavaScript <div class="progress"><div class="progress-bar bg-success" style="width: 75%">75%</div></div></div>
+      <div class="mb-1">MySQL <div class="progress"><div class="progress-bar bg-primary" style="width: 70%">70%</div></div></div>
+    </div>
+
+    <!-- Skill badges -->
+    <div class="mb-2">
+      <span class="cv-skill-badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+      <span class="cv-skill-badge"><i class="bi bi-database"></i> MySQL</span>
+    </div>
+
+    <div class="mb-1"><strong>Email:</strong> <a href="mailto:Hung@gmail.com" class="text-primary">Hung@gmail.com</a></div>
+    <div>
+      <a href="hung.html" class="btn btn-outline-primary btn-sm mt-2">Xem CV</a>
+    </div>
+  </div>
+</div>
+
+<!-- CV Card: Dương Quốc Huân -->
+<div class="col-md-4 mb-4 cv-item" data-skills="reactjs mongodb" id="cv-huan">
+  <div class="cv-card h-100">
+    <div class="text-center">
+      <img src="c:\Users\FPT 1174\Downloads\anh3.jpg" alt="Avatar" class="avatar">
+      <div class="cv-name">Dương Quốc Huân</div>
+      <div class="cv-title">ReactJS Developer</div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-2 mb-2">
+      <div class="fw-semibold small text-muted mb-1">Mức độ kỹ năng</div>
+      <div class="mb-1">ReactJS <div class="progress"><div class="progress-bar bg-info" style="width: 85%">85%</div></div></div>
+      <div class="mb-1">MongoDB <div class="progress"><div class="progress-bar bg-secondary" style="width: 65%">65%</div></div></div>
+    </div>
+
+    <!-- Skill badges -->
+    <div class="mb-2">
+      <span class="cv-skill-badge"><i class="bi bi-react"></i> ReactJS</span>
+      <span class="cv-skill-badge"><i class="bi bi-database-fill"></i> MongoDB</span>
+    </div>
+
+    <div class="mb-1"><strong>Email:</strong> <a href="mailto:Huan@gmail.com" class="text-primary">Huan@gmail.com</a></div>
+    <div>
+      <a href="chitiet4.html" class="btn btn-outline-primary btn-sm mt-2">Xem CV</a>
+    </div>
+  </div>
+</div>
+
+			</div>
+		</div>
+        <!-- Footer -->
+<footer class="bg-dark text-light pt-5 pb-4 ">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <!-- Cột 1 -->
+      <div class="col-md-4">
+        <h4 class="fw-bold">LAMY <span class="text-warning">HOUSE</span></h4>
+        <p>
+          Hoạt động trong lĩnh vực thiết kế nội thất, thiết kế kiến trúc, xây nhà trọn gói, 
+          Lamyhouse đặt mục tiêu trở thành nhà cung cấp các dịch vụ kiến trúc hàng đầu tại Hà Nội.
+        </p>
+        <div class="d-flex gap-2">
+          <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-messenger"></i></a>
+          <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+	
+      <!-- Cột 2 -->
+      <div class="col-md-4">
+        <h5 class="fw-bold">Công ty cổ phần kiến trúc nội thất Lamyhouse</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-geo-alt-fill text-warning me-2"></i>Tầng 6 tòa nhà Ladeco, 266 Đội Cấn, phường Liễu Giai, Hà Nội</li>
+          <li class="mb-2"><i class="bi bi-telephone-fill text-warning me-2"></i>1900 6750 - <span class="text-warning">1900 6750</span></li>
+          <li><i class="bi bi-envelope-fill text-warning me-2"></i>hellocafein@gmail.com</li>
+        </ul>
+      </div>
+
+      <!-- Cột 3 -->
+      <div class="col-md-4">
+        <h5 class="fw-bold">Góc nhìn thiết kế</h5>
+        <div class="d-flex mb-2">
+          <img src="https://via.placeholder.com/60x40" class="rounded me-2" alt="">
+          <a href="#" class="text-light small">Ý tưởng thiết kế phòng ngủ nhiều màu sắc cho bé thích mê</a>
+        </div>
+        <div class="d-flex mb-2">
+          <img src="https://via.placeholder.com/60x40" class="rounded me-2" alt="">
+          <a href="#" class="text-light small">8 yếu tố để thiết kế nội thất nhà đẹp như ý muốn</a>
+        </div>
+        <a href="#" class="text-warning">Xem thêm</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+		<script>
+		// Lọc CV theo kỹ năng (hỗ trợ cả button và dropdown)
+		const filterBtns = document.querySelectorAll('.filter-btn');
+		const cvItems = document.querySelectorAll('.cv-item');
+		filterBtns.forEach(btn => {
+		  btn.addEventListener('click', function(e) {
+		    e.preventDefault();
+		    filterBtns.forEach(b => b.classList.remove('active'));
+		    this.classList.add('active');
+		    const skill = this.getAttribute('data-skill');
+		    cvItems.forEach(item => {
+		      if(skill === 'all' || item.getAttribute('data-skills').includes(skill)) {
+		        item.style.display = '';
+		      } else {
+		        item.style.display = 'none';
+		      }
+		    });
+		  });
+		});
+		// Mặc định chọn "Tất cả"
+		document.querySelectorAll('.filter-btn[data-skill="all"]').forEach(btn => btn.classList.add('active'));
+
+		// Kích hoạt tooltip Bootstrap
+		const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+		tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+		  new bootstrap.Tooltip(tooltipTriggerEl);
+		});
+
+		// Kích hoạt scrollspy
+		const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+		  target: '#scrollspyNav',
+		  offset: 80
+		});
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
