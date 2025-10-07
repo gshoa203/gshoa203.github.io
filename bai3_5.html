@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài 3.5 - Form Xử Lý Nhập Liệu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light d-flex align-items-center justify-content-center vh-100">
+    <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
+      <div class="text-center mb-3">
+        <i class="bi bi-person-fill text-primary" style="font-size: 3rem;"></i>
+        <h4 class="mt-2">Đăng nhập hệ thống</h4>
+      </div>
+
+      <form>
+        <!-- Tên người nhập -->
+        <div class="mb-3">
+          <label for="tenNguoiNhap" class="form-label">Tên người nhập</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tenNguoiNhap"
+            placeholder="Nhập họ tên..."
+            required
+          />
+        </div>
+
+        <!-- Mật khẩu -->
+        <div class="mb-3">
+          <label for="matKhau" class="form-label">Mật khẩu</label>
+          <input
+            type="password"
+            class="form-control"
+            id="matKhau"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+
+        <!-- Checkbox đồng ý -->
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="dongY"
+            required
+          />
+          <label class="form-check-label" for="dongY">
+            Đồng ý 
+          </label>
+        </div>
+
+        <!-- Nút đăng nhập -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-box-arrow-in-right"></i> Đăng nhập
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
