@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài 5.8 - Scrollspy Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-smooth-scroll="true" tabindex="0">
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="navbar-example" class="col-md-3 col-lg-2 d-md-block bg-light sidebar position-fixed h-100">
+          <div class="p-3">
+            <h5>Nội dung</h5>
+            <nav class="nav flex-column">
+              <a class="nav-link active" href="#section1">Phần 1</a>
+              <a class="nav-link" href="#section2">Phần 2</a>
+              <a class="nav-link" href="#section3">Phần 3</a>
+            </nav>
+          </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <section id="section1" class="pt-5">
+            <h3>Phần 1: Tổng quan về Bootstrap</h3>
+            <p>Bootstrap là framework front-end phổ biến dùng để xây dựng giao diện web hiện đại...</p>
+          </section>
+
+          <section id="section2" class="pt-5">
+            <h3>Phần 2: Các thành phần phổ biến trong Bootstrap</h3>
+            <p>Bootstrap cung cấp nhiều thành phần như Navbar, Buttons, Cards, Modal, Form...</p>
+          </section>
+
+          <section id="section3" class="pt-5 mb-5">
+            <h3>Phần 3: Lợi ích và Ứng dụng</h3>
+            <p>Bootstrap giúp tiết kiệm thời gian, dễ tùy chỉnh và tương thích với nhiều thiết bị...</p>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
